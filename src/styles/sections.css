@@ -1,0 +1,47 @@
+section .section-head {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+  gap: 3.5vw;
+}
+
+section .section-head h2 {
+  font-size: 1rem;
+}
+
+section .section-head .box:nth-child(1) span {
+  font-size: var(--h3-fs);
+  font-family: var(--title-ff);
+}
+
+/* section HERO */
+
+section.-hero {
+  height: 100vh;
+  color: var(--white);
+}
+
+section.-hero .title {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Activist", sans-serif;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+section.-hero p {
+  display: block;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+section.-hero .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+section.-hero .bg-image {
+  object-fit: cover;
+}

@@ -1,0 +1,263 @@
+/* button */
+
+.button {
+  position: relative;
+  display: inline-block;
+}
+
+/* button form */
+
+.-form {
+  cursor: pointer;
+  font-family: "Activist", sans-serif;
+  font-weight: 300;
+  margin-top: 25px;
+}
+
+/* button underline */
+
+.-underline {
+  position: relative;
+  padding: 0 0 5px 0;
+}
+
+.-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  width: 0;
+  height: 1px;
+  background-color: var(--black);
+  transition: all 0.3s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+}
+
+.-underline:hover::after {
+  width: calc(100% + 2px);
+}
+
+/* button underlined */
+
+.-underlined {
+  position: relative;
+  padding: 0 0 5px 0;
+}
+
+.-underlined::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 1px;
+  background-color: var(--black);
+  transition: all 0.3s cubic-bezier(0.28, 0.81, 0.43, 0.97);
+}
+
+.-underlined:hover::after {
+  width: 20%;
+}
+
+/* button outline */
+
+.button.-outline {
+  background-color: transparent;
+  border: 1px solid rgba(190, 190, 190, 0.4);
+
+  border-radius: 3px;
+  line-height: 3.2rem;
+  padding: 0 1.45rem;
+}
+
+.button.-outline[data-magnetic]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+}
+
+.button.-outline:hover span::after {
+  color: var(--white);
+  z-index: 5;
+}
+
+.button.-outline .ripple {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  border-radius: inherit;
+}
+
+.ripple .ripple-span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  background-color: var(--black);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -webkit-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -webkit-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  -o-transition: border-radius 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -o-transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+  -moz-transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    border-radius 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -moz-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -moz-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    border-radius 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -webkit-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -moz-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -o-transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -webkit-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1),
+    -moz-border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.button.-outline:hover .ripple .ripple-span {
+  border-radius: 0;
+  transform: translateY(0);
+  transition-duration: 0s, 0s;
+  animation: ripple-in 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+
+@keyframes ripple-in {
+  0% {
+    border-radius: 100%;
+    transform: translateY(-100%) translateZ(0);
+  }
+
+  100% {
+    border-radius: 0;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+/* button solid */
+
+.button.-theme {
+  border-radius: 3px;
+  line-height: 3.2rem;
+  padding: 0 1.45rem;
+  background-color: var(--theme-color);
+}
+
+/* button solid */
+
+.button.-solid {
+  border-radius: 3px;
+  line-height: 3.2rem;
+  padding: 0 1.45rem;
+  background-color: var(--light);
+}
+
+/* button solid full */
+
+.button.-fullsolid {
+  border-radius: 3px;
+  line-height: 3.2rem;
+  padding: 0 1.45rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.button.-fullsolid span::before,
+.button.-fullsolid span::after {
+  color: var(--white);
+}
+
+/* btn skew hover effect */
+
+.-skew {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.-skew span {
+  color: transparent;
+  display: inline-block;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.-skew span::after {
+  top: 105%;
+  transform: skewY(7deg);
+  transform-origin: left top;
+  transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.-skew span::after,
+.-skew span::before {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: var(--black);
+}
+
+section.auto span::after,
+section.auto .-skew span::before {
+  color: var(--white);
+}
+
+.-skew:hover span {
+  transform: translateY(-105%);
+}
+
+.-skew span::before {
+  top: 0;
+  -webkit-transform: skewY(0);
+  -moz-transform: skewY(0);
+  -ms-transform: skewY(0);
+  -o-transform: skewY(0);
+  transform: skewY(0);
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: -o-transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1),
+    -moz-transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1),
+    -webkit-transform 2s cubic-bezier(0.19, 1, 0.22, 1),
+    -moz-transform 2s cubic-bezier(0.19, 1, 0.22, 1),
+    -o-transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.-skew:hover span::before {
+  transform: skewY(7deg);
+}
+
+.-skew:hover span:after {
+  -webkit-transform: skewY(0);
+  -moz-transform: skewY(0);
+  -ms-transform: skewY(0);
+  -o-transform: skewY(0);
+  transform: skewY(0);
+}
