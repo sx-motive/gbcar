@@ -45,3 +45,18 @@ section.-hero .container {
 section.-hero .bg-image {
   object-fit: cover;
 }
+
+section .-services-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10vh 0;
+}
+
+section .-services-wrap .box {
+  position: relative;
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #000;
+}
