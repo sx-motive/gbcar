@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Button from "../src/components/button";
+import SHead from "../src/sections/shead";
+import Services from "../src/sections/services";
+import SPrice from "../src/sections/sprice";
+import Accordion from "../src/components/accordion";
+import Circlebtn from "../src/components/cyclebtn";
+import Sslick from "../src/sections/sslick";
+import Sreview from "../src/sections/sreview";
 
 export default function Home() {
   return (
@@ -15,75 +22,53 @@ export default function Home() {
               В 95% аргументированный торг позволяет полностью окупить затраты
               на услуги подбора автомобиля.
             </p>
-            <Button href="/" className="-theme">
-              Оставить заявку
+            <Button href="/" className="-theme -skew button">
+              Узнать подробнее
             </Button>
           </div>
         </div>
         <Image
+          data-scroll
+          data-scroll-speed="-5"
           className="bg-image"
           src="/images/bg1.jpg"
           quality={100}
           layout="fill"
         />
       </section>
-      <section className="services" data-scroll-section>
+      <SHead
+        id="services"
+        title="Улуги автоподбора в Оренбурге"
+        sub="Детальный осмотр автомобиля"
+        description="Вы получаете качественную помощь при покупке автомобиля и
+              ЭКОНОМИТЕ собственные нервы и средства, которые тратятся при
+              покупке «автохлама»!"
+      />
+      <Services />
+      <SPrice />
+      <SHead
+        title="Частые вопросы автоподбора"
+        sub="Полезная информация"
+        description="Вы получаете качественную помощь при покупке автомобиля и
+              ЭКОНОМИТЕ собственные нервы и средства, которые тратятся при
+              покупке «автохлама»!"
+        id="faqs"
+      />
+      <section data-scroll-section className="section-accordion">
         <div className="container -default">
-          <div className="section-head">
-            <div className="box">
-              <h2>Улуги автоподбора в Оренбурге</h2>
-              <span>Детальный осмотр автомобиля</span>
-            </div>
-            <div className="box">
-              <p>
-                Вы получаете качественную помощь при покупке автомобиля и
-                ЭКОНОМИТЕ собственные нервы и средства, которые тратятся при
-                покупке «автохлама»!
-              </p>
-            </div>
-            <div className="box">
-              <Button href="/" className="-fullsolid -skew">
-                Узнать цены
-              </Button>
-            </div>
-          </div>
-          <div className="-services-wrap">
-            <div className="box">
-              <h5>Осмотр кузова</h5>
-              <p>
-                Является на наш взгляд главным показателем состояния автомобиля,
-                так как почти в 100% случаев кузов является самым дорогим
-                компонентом автомобиля, и в довесок к этому – основой для
-                безопасности вашей жизни.
-              </p>
-            </div>
-            <div className="box">
-              <h5>Техническая часть</h5>
-              <p>
-                Осматриваем двигатель на выявление масляных потеков, наличие
-                посторонних шумов при работе. При движении оцениваем плавность
-                хода и переключений передач, а так же работу подвески
-                автомобиля.
-              </p>
-            </div>
-            <div className="box">
-              <h5>Проверка документов</h5>
-              <p>
-                Осматриваем ПТС на подлинность, сверяем ВИНкод в ПТС с ВИНкодом
-                на автомобиле, просматриваем данные об автомобиле по основным
-                базам данных на предмет залога, ограничений, наличия дтп и т.д.
-              </p>
-            </div>
-            <div className="box">
-              <h5>Оценка стоимости</h5>
-              <p>
-                После проверки всех параметров, производим оценку реальной
-                стоимости автомобиля.
-              </p>
-            </div>
-          </div>
+          <Accordion />
         </div>
       </section>
+      <SHead
+        title="Качественная работа с клиентами автоподбора"
+        sub="Отзывы наших клиентов"
+        description="Вы получаете качественную помощь при покупке автомобиля и
+              ЭКОНОМИТЕ собственные нервы и средства, которые тратятся при
+              покупке «автохлама»!"
+        id="review"
+      />
+      <Sreview />
+      <Sslick />
     </>
   );
 }

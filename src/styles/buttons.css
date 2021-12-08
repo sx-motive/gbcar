@@ -161,6 +161,12 @@
   line-height: 3.2rem;
   padding: 0 1.45rem;
   background-color: var(--theme-color);
+  color: var(--white);
+}
+
+.button.-theme span::before,
+.button.-theme span::after {
+  color: var(--white);
 }
 
 /* button solid */
@@ -260,4 +266,54 @@ section.auto .-skew span::before {
   -ms-transform: skewY(0);
   -o-transform: skewY(0);
   transform: skewY(0);
+}
+
+.button--surtur {
+  position: relative;
+  padding: 0;
+  background: none;
+  -webkit-clip-path: circle(40% at 50% 50%);
+  clip-path: circle(40% at 50% 50%);
+  display: block;
+}
+
+.button--surtur:focus-visible {
+  background: #443ffc;
+}
+
+.textcircle {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.textcircle text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  fill: var(--black);
+  font-family: var(--title-ff);
+}
+
+.textcircle textPath {
+  letter-spacing: 0rem;
+}
+
+.button--surtur .textcircle {
+  animation: rotateIt 10s linear infinite;
+}
+
+.button--surtur img {
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  transform: rotate(45deg);
+}
+@keyframes rotateIt {
+  to {
+    transform: rotate(-360deg);
+  }
 }
