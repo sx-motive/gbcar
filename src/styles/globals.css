@@ -268,12 +268,13 @@ input {
   display: inline-block;
   text-align: start;
   appearance: auto;
-  background-color: #f4f4f4;
+  background-color: #fff;
   cursor: text;
   margin: 0em;
-  font: 400 0.9rem Gilroy;
+  font-family: var(--p-ff);
   padding: 1.2rem 1.5rem;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #000;
+  font-size: 0.9rem;
 }
 
 /* header */
@@ -415,4 +416,73 @@ footer ul {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.modal-head-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-title {
+  font-family: var(--title-ff);
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: solid 1px var(--black);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.modal-close:hover {
+  background-color: #dbdbdb;
+}
+
+.modal-close img {
+  position: relative;
+  width: 13px;
+}
+
+form.modal-form {
+  position: relative;
+  width: 100%;
+  margin: 30px 0 10px 0;
+}
+
+form.modal-form input {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+form .submit {
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+form .submit:hover {
+  background-color: transparent;
+  color: var(--black);
+}
+
+.policy-text {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  padding: 5px;
+}
+
+.policy-text a {
+  text-decoration: underline;
+  font-family: var(--p-ff);
 }

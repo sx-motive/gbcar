@@ -10,8 +10,8 @@ import {
 
 export default function Example() {
   return (
-    <Accordion>
-      <AccordionItem>
+    <Accordion preExpanded={["a"]}>
+      <AccordionItem uuid="a">
         <AccordionItemHeading>
           <AccordionItemButton>
             Для чего нужен автоэксперт при покупке автомобиля?

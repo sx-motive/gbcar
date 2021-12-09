@@ -5,24 +5,6 @@ import Button from "./button";
 import { nav } from "../../src/utils/localdata";
 
 export default function Header() {
-  // Sticky Menu Area
-  useEffect(() => {
-    window.addEventListener("scroll", isSticky);
-    return () => {
-      window.removeEventListener("scroll", isSticky);
-    };
-  });
-  /* Method that will fix header after a specific scrollable */
-  const isSticky = (e) => {
-    const header = document.querySelector(".header");
-    const scrollTop = window.scrollY;
-    scrollTop >= 200
-      ? header.classList.add("is-sticky")
-      : header.classList.remove("is-sticky");
-    scrollTop >= 700
-      ? header.classList.add("is-sticky-show")
-      : header.classList.remove("is-sticky-show");
-  };
   return (
     <header className="header" data-scroll-section>
       <div className="box">
@@ -40,7 +22,8 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <Button href="/" className="-outline -skew">
+
+        <Button href="tel:+79501888444" className="-outline -skew">
           Позвонить в офис
         </Button>
       </div>

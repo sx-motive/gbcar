@@ -14,8 +14,8 @@ export default function SHead(props) {
             <p>{props.description}</p>
           </div>
           <div className="box">
-            <Button href="/" className="-fullsolid -skew">
-              Узнать цены
+            <Button href={props.link} className="-fullsolid -skew">
+              {props.titlebtn}
             </Button>
           </div>
         </div>

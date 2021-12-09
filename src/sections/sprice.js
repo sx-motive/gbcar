@@ -18,7 +18,7 @@ export default function SPrice(props) {
             </p>
           </div>
           <div className="box">
-            <Button href="/" className="-fullsolid -skew">
+            <Button href="tel:+79501888444" className="-fullsolid -skew">
               Консультация
             </Button>
           </div>
@@ -44,7 +44,7 @@ export default function SPrice(props) {
             </ul>
             <div className="sp-item-footer">
               <span className="sp-item-price">2000р</span>
-              <Button href="/" className="-fullsolid -skew">
+              <Button href="tel:+79501888444" className="-fullsolid -skew">
                 Заказать услугу
               </Button>
             </div>
@@ -66,7 +66,7 @@ export default function SPrice(props) {
             </ul>
             <div className="sp-item-footer">
               <span className="sp-item-price">5000р</span>
-              <Button href="/" className="-fullsolid -skew">
+              <Button href="tel:+79501888444" className="-fullsolid -skew">
                 Заказать услугу
               </Button>
             </div>
@@ -87,7 +87,7 @@ export default function SPrice(props) {
             </ul>
             <div className="sp-item-footer">
               <span className="sp-item-price">10000р</span>
-              <Button href="/" className="-fullsolid -skew">
+              <Button href="tel:+79501888444" className="-fullsolid -skew">
                 Заказать услугу
               </Button>
             </div>

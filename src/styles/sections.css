@@ -256,3 +256,30 @@ section.review-section .date {
   opacity: 0.2;
   text-align: right;
 }
+
+/* SECTION FULL IMAGE */
+section.section-full-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;
+  display: block;
+  margin-bottom: -1px;
+}
+section.section-full-image img {
+  position: relative;
+
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* SECTION POLICY */
+
+section.policy {
+  padding: 10vh 0;
+}
+section.policy .container {
+  max-width: 900px;
+}

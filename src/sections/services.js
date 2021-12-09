@@ -10,7 +10,7 @@ export default function Services() {
       <div className="container -default">
         <div className="services-wrapper">
           {services.map((item, index) => (
-            <Link key={index} href="/">
+            <Link key={index} href="#price">
               <a className="service-single-wrap">
                 <div className="service-image-wrap">
                   <Image
@@ -28,7 +28,7 @@ export default function Services() {
             </Link>
           ))}
         </div>
-        <Circlebtn>Смотереть все услуги автоподобра *</Circlebtn>
+        <Circlebtn>Закажите услуги уже сегодня *</Circlebtn>
       </div>
     </section>
   );
