@@ -131,7 +131,7 @@ export default function Home() {
           </div>
         </div>
 
-        <form action="POST" name="contact" className="modal-form" netlify>
+        <form method="POST" name="contact" className="modal-form" netlify>
           <input type="text" name="name" placeholder="Ваше имя и фамилия" />
 
           <input
