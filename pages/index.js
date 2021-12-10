@@ -55,9 +55,9 @@ export default function Home() {
               В 95% аргументированный торг позволяет полностью окупить затраты
               на услуги подбора автомобиля.
             </p>
-            <div onClick={openModal}>
-              <Button href="/" className="-theme -skew button">
-                Оставить заявку
+            <div>
+              <Button href="#services" className="-theme -skew button">
+                Узнать подробнее
               </Button>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
               ЭКОНОМИТЕ собственные нервы и средства, которые тратятся при
               покупке «автохлама»!"
         link="#price"
-        titlebtn="Подробнее"
+        titlebtn="Пакеты услуг"
       />
       <Services />
       <Simage src="/images/04.jpg" />

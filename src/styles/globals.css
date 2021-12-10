@@ -8,6 +8,28 @@
   font-display: swap;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--title-ff);
+  font-size: 2rem;
+}
+
+.d-none {
+  display: none;
+}
+
 /*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 
 html.has-scroll-smooth {
@@ -485,4 +507,45 @@ form .submit:hover {
 .policy-text a {
   text-decoration: underline;
   font-family: var(--p-ff);
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container.-default {
+    padding: 0 20px;
+  }
+
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header ul {
+    display: none;
+  }
+
+  footer ul {
+    display: none;
+  }
+
+  footer .f-title {
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+  footer .row {
+    flex-wrap: wrap;
+  }
+  footer .call {
+    display: block;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
 }

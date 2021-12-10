@@ -20,9 +20,11 @@ function MyApp({ Component, pageProps }) {
     return () => scroll.destroy();
   });
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 

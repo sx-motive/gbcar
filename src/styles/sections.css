@@ -283,3 +283,101 @@ section.policy {
 section.policy .container {
   max-width: 900px;
 }
+
+@media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 900px) {
+  section.-hero .title {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  section.-hero p {
+    width: 100%;
+  }
+
+  section .section-head {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  section .section-head .box:nth-child(1) span {
+    font-size: 2rem;
+  }
+  section .section-head .box:nth-child(3) {
+    justify-content: flex-start;
+  }
+
+  section.services-section .services-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    gap: 30px;
+  }
+  section.services-section .service-single-wrap:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  section.services-section .service-single-wrap:nth-child(3) {
+    margin-top: 0px;
+  }
+
+  section.services-section .button--surtur {
+    margin-top: 0px;
+  }
+
+  section.section-full-image {
+    height: 50vh;
+  }
+  section.section-full-image img {
+    height: 100%;
+    width: auto;
+  }
+  .sp-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .sp-item {
+    padding: 60px 10px;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid rgba(80, 80, 80, 0.493);
+    border-bottom: 1px solid rgba(80, 80, 80, 0.493);
+  }
+  .accordion__panel {
+    padding: 15px 15px 5px 15px !important;
+  }
+  .accordion__button {
+    padding: 30px 22px !important;
+
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  section.review-section .container {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    gap: 0px;
+  }
+
+  section.review-section .box {
+    margin-top: -1px;
+    padding: 50px 0;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(202, 202, 202);
+  }
+
+  section.review-section .box:nth-child(2) {
+    transform: translateY(0%);
+  }
+
+  section.review-section .stars-wrap {
+    grid-gap: 3px;
+    gap: 3px;
+  }
+
+  section.review-section .stars-wrap img {
+    width: 10px;
+    height: 10px;
+  }
+}
