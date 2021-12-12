@@ -14,6 +14,7 @@ export default function Services() {
               <a className="service-single-wrap">
                 <div className="service-image-wrap">
                   <Image
+                    priority
                     data-scroll
                     data-scroll-speed="-3"
                     src={item.image}
